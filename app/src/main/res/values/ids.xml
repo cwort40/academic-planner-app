@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="title_text_view" type="id"/>
+    <item name="recyclerview" type="id"/>
+    <item name="recyclerview_terms" type="id"/>
+    <item name="recyclerview_term_details" type="id" />
+</resources>

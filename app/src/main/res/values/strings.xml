@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WGU_Mobile</string>
+    <string name="hint_word">Start typing...</string>
+    <string name="button_save">Save</string>
+    <string name="term_empty_not_saved">Term not saved because it is empty.</string>
+    <string name="button_description_return">Return</string>
+    <string name="term_title">Term Title</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+</resources>
