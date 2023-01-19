@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TermViewModel extends AndroidViewModel {
 
-    private TermRepository mRepository;
+    private final TermRepository mRepository;
 
     private final LiveData<List<TermEntity>> mAllTerms;
 

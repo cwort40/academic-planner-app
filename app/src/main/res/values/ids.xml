@@ -4,4 +4,5 @@
     <item name="recyclerview" type="id"/>
     <item name="recyclerview_terms" type="id"/>
     <item name="recyclerview_term_details" type="id" />
+    <item name="recyclerview_courses" type="id" />
 </resources>

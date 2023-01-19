@@ -13,9 +13,9 @@ import com.c196.wgu_mobile.R;
 
 public class NewTermActivity extends AppCompatActivity {
 
-    public static final String ADD_TERM_TITLE = "com.c196.wgu_mobile.EXTRA_TITLE";
-    public static final String ADD_TERM_START = "com.c196.wgu_mobile.EXTRA_START";
-    public static final String ADD_TERM_END = "com.c196.wgu_mobile.EXTRA_END";
+    public static final String ADD_TERM_TITLE = "com.c196.wgu_mobile.EXTRA_TERM_TITLE";
+    public static final String ADD_TERM_START = "com.c196.wgu_mobile.EXTRA_TERM_START";
+    public static final String ADD_TERM_END = "com.c196.wgu_mobile.EXTRA_TERM_END";
 
 
     private EditText mAddTermTitle;

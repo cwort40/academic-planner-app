@@ -7,4 +7,12 @@
     <string name="term_title">Term Title</string>
     <string name="start_date">Start Date</string>
     <string name="end_date">End Date</string>
+    <string name="course_title">Course Title</string>
+    <string name="status">Status</string>
+    <string name="ins_name">Instructor Name</string>
+    <string name="ins_phone">Instructor Phone</string>
+    <string name="ins_email">Instructor Email</string>
+    <string name="course_empty_not_saved">Course not saved because it is empty.</string>
+    <string name="note">Notes:</string>
+    <string name="select_term">Select Term</string>
 </resources>

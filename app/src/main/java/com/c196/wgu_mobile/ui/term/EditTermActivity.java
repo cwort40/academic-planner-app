@@ -57,7 +57,7 @@ public class EditTermActivity extends AppCompatActivity {
                     || TextUtils.isEmpty(mEditTermEnd.getText())) {
                 setResult(RESULT_CANCELED, replyIntent);
             } else {
-                TermEntity term = new TermEntity(mEditTermTitle.getText().toString(), mEditTermStart.getText().toString(), mEditTermEnd.getText().toString());
+//                TermEntity term = new TermEntity(mEditTermTitle.getText().toString(), mEditTermStart.getText().toString(), mEditTermEnd.getText().toString());
                 Bundle termDetails = new Bundle();
                 termDetails.putString("title", mEditTermTitle.getText().toString());
                 termDetails.putString("start", mEditTermStart.getText().toString());

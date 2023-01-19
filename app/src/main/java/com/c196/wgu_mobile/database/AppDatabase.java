@@ -6,28 +6,23 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import com.c196.wgu_mobile.entity.CourseEntity;
+import com.c196.wgu_mobile.entity.CourseTermJoin;
 import com.c196.wgu_mobile.entity.TermEntity;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-//Currently commenting out other classes that are yet to exist
-
-//@Database(entities = {TermEntity.class, CourseEntity.class, AssessmentEntity.class,
-//        NoteEntity.class, InstructorEntity.class, CourseInstructorJoinEntity.class}, version = 1)
-@Database(entities = {TermEntity.class}, version = 1, exportSchema = false)
+@Database(entities = {TermEntity.class, CourseEntity.class, CourseTermJoin.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
-    private static AppDatabase instance;
-
     public abstract TermDao termDao();
-//    public abstract CourseDao courseDao();
-//    public abstract AssessmentDao assessmentDao();
-//    public abstract NoteDao noteDao();
-//    public abstract InstructorDao instructorDao();
+    public abstract CourseDao courseDao();
+    public abstract CourseTermJoinDao courseTermJoinDao();
+
+    private static AppDatabase instance;
 
     private static volatile AppDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
@@ -37,18 +32,19 @@ public abstract class AppDatabase extends RoomDatabase {
     public static AppDatabase getInstance(final Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
-                    AppDatabase.class, "app-database")
+                            AppDatabase.class, "app-database")
                     .addCallback(sRoomDatabaseCallback)
                     .build();
         }
         return instance;
     }
 
-    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
+    private static final RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
         }
     };
 }
+
 

@@ -12,13 +12,13 @@ import java.util.List;
 
 public class TermRepository {
 
-    private TermDao termDao;
-    private LiveData<List<TermEntity>> allTerms;
+    private final TermDao termDao;
+    private final LiveData<List<TermEntity>> allTerms;
 
     public TermRepository(Application application) {
         AppDatabase database = AppDatabase.getInstance(application);
         termDao = database.termDao();
-        allTerms = termDao.getAll();
+        allTerms = termDao.getAllTerms();
     }
 
     public LiveData<List<TermEntity>> getAllTerms() {

@@ -7,23 +7,24 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.c196.wgu_mobile.entity.TermEntity;
+import com.c196.wgu_mobile.entity.CourseEntity;
 
 import java.util.List;
 
 @Dao
-public interface TermDao {
+public interface CourseDao {
 
-    @Query("SELECT * FROM terms")
-    LiveData<List<TermEntity>> getAllTerms();
+    @Query("SELECT * FROM courses")
+    LiveData<List<CourseEntity>> getAllCourses();
 
     @Insert
-    void insert(TermEntity term);
+    void insert(CourseEntity course);
 
     @Update
-    void update(TermEntity term);
+    void update(CourseEntity course);
 
     @Delete
-    void delete(TermEntity term);
+    void delete(CourseEntity course);
 
 }
+

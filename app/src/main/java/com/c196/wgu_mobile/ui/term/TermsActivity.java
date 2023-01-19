@@ -151,10 +151,6 @@ public class TermsActivity extends AppCompatActivity {
                         mTermViewModel.getAllTerms()
                                 .observe(TermsActivity.this, adapter::submitList);
 
-                        //debug
-                        System.out.println(data.getStringExtra(EditTermActivity.EDIT_TERM_TITLE));
-                        System.out.println(data.getStringExtra(EditTermActivity.TERM_ID));
-
                     } else {
                         Toast.makeText(
                                 getApplicationContext(),
